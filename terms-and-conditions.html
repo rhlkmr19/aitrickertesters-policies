@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms &amp; Conditions — AiTricker Testers</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #374151;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+.top-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.top-nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tabs {
+    display: flex;
+    gap: 4px;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 12px;
+}
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.tab-btn:hover {
+    color: #374151;
+    background: #e5e7eb;
+}
+.tab-btn.active {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+.header-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    border: 1px solid;
+}
+.header-card.green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.header-card.blue {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.header-card.amber {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.header-card h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+.header-card .subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+.header-card .date {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+}
+.section {
+    margin-bottom: 32px;
+}
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.section-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.section-num.green { background: #10b981; }
+.section-num.blue { background: #3b82f6; }
+.section-num.amber { background: #f59e0b; }
+.section-head h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+.section p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 14px;
+}
+.info-card {
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 14px 0;
+    border: 1px solid;
+}
+.info-card.green-card {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+.info-card.blue-card {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+.info-card.amber-card {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+.info-card.red-card {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+.info-card.purple-card {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+}
+.info-card.gray-card {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+}
+.info-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.info-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.info-card p:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 22px; margin: 10px 0 14px; }
+li { font-size: 14px; color: #4b5563; padding: 4px 0; line-height: 1.6; }
+li strong { color: #111827; }
+.divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+.contact-card {
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 32px;
+}
+.contact-card.green-contact {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.contact-card.blue-contact {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.contact-card.amber-contact {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.contact-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+.contact-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+.contact-card a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 12px;
+}
+.contact-card.green-contact a { background: #10b981; }
+.contact-card.blue-contact a { background: #3b82f6; }
+.contact-card.amber-contact a { background: #f59e0b; }
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+.toc {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+.toc h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.toc ol {
+    padding-left: 20px;
+    margin: 0;
+}
+.toc li {
+    font-size: 13px;
+    color: #4b5563;
+    padding: 4px 0;
+}
+@media (max-width: 600px) {
+    .top-nav-inner { flex-direction: column; align-items: stretch; }
+    .tabs { overflow-x: auto; }
+    .header-card { padding: 24px 20px; }
+    .header-card h1 { font-size: 24px; }
+    .main-content { padding: 24px 16px 40px; }
+}
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="top-nav">
+    <div class="top-nav-inner">
+        <div class="brand">
+            <div class="brand-icon">AT</div>
+            <span>AiTricker Testers</span>
+        </div>
+        <div class="tabs">
+            <a class="tab-btn" href="index.html">Privacy Policy</a>
+            <a class="tab-btn active" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="tab-btn" href="refund-policy.html">Refund Policy</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <div class="header-card blue">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="subtitle">AiTricker Testers Mobile Application</p>
+        <p class="date">Last Updated: May 27, 2026</p>
+        <div class="badges">
+            <span class="badge">📜 Legally Binding</span>
+            <span class="badge">🤝 Community Rules</span>
+            <span class="badge">🌐 All Users</span>
+            <span class="badge">⚖️ India Jurisdiction</span>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <p style="font-size: 15px; color: #4b5563; margin-bottom: 12px;">
+        These Terms &amp; Conditions ("Terms") govern your access to and use of the AiTricker Testers mobile application ("the App", "our App") and all related services. By downloading, installing, or using the App, you agree to be bound by these Terms.
+    </p>
+    <div class="info-card red-card">
+        <h4>⚠️ Important</h4>
+        <p>If you do not agree with any part of these Terms, you must not use the App. Continued use of the App constitutes acceptance of these Terms and any future modifications.</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li>Acceptance of Terms</li>
+            <li>About AiTricker Testers</li>
+            <li>Eligibility</li>
+            <li>User Accounts</li>
+            <li>User Conduct &amp; Obligations</li>
+            <li>Sparks (Virtual Credits)</li>
+            <li>Pack Participation</li>
+            <li>Quick List Testing</li>
+            <li>User-Generated Content</li>
+            <li>Paid Plans &amp; Billing</li>
+            <li>Trust Score &amp; Accountability</li>
+            <li>Reporting &amp; Enforcement</li>
+            <li>Intellectual Property</li>
+            <li>Disclaimers</li>
+            <li>Limitation of Liability</li>
+            <li>Indemnification</li>
+            <li>Termination</li>
+            <li>Governing Law &amp; Disputes</li>
+            <li>Changes to These Terms</li>
+            <li>Contact Us</li>
+        </ol>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">1</div>
+            <h2>Acceptance of Terms</h2>
+        </div>
+        <p>By creating an account, accessing, or using AiTricker Testers, you confirm that:</p>
+        <ul>
+            <li>You have read, understood, and agree to be bound by these Terms</li>
+            <li>You agree to our Privacy Policy and Refund Policy</li>
+            <li>You are legally capable of entering into a binding agreement</li>
+            <li>You will comply with all applicable local, national, and international laws and regulations</li>
+        </ul>
+        <p>These Terms constitute a legally binding agreement between you ("User", "you", "your") and AiTricker Testers ("we", "us", "our").</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">2</div>
+            <h2>About AiTricker Testers</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>📱 What We Do</h4>
+            <p>AiTricker Testers is a <strong>mutual testing community platform</strong> for Android app developers. The App facilitates a community where developers help each other by testing each other's apps through Google Play's closed testing program.</p>
+            <p><strong>How It Works:</strong></p>
+            <ul>
+                <li>Developers list their apps for testing on our platform</li>
+                <li>Community members test listed apps through closed testing links</li>
+                <li>Testers earn Sparks (virtual credits) for completing tests</li>
+                <li>Sparks can be used to list your own apps for testing</li>
+                <li>Testing is organized through Quick Lists (individual) and Packs (group sessions)</li>
+            </ul>
+        </div>
+        <div class="info-card amber-card">
+            <h4>⚠️ What We Do NOT Guarantee</h4>
+            <p>We are a platform that <strong>facilitates connections</strong> between developers and testers. We do NOT guarantee:</p>
+            <ul>
+                <li>A specific number of testers for your app</li>
+                <li>Google Play Store approval of your app</li>
+                <li>Positive reviews or ratings</li>
+                <li>Any specific outcome from the testing process</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">3</div>
+            <h2>Eligibility</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>✅ Requirements to Use the App</h4>
+            <ul>
+                <li>You must be at least <strong>13 years of age</strong> to use the App</li>
+                <li>If you are between 13 and 18, you must have parental or guardian consent</li>
+                <li>You must have a valid Google account for authentication</li>
+                <li>You must have access to the Google Play Store</li>
+                <li>You must not have been previously banned or terminated from our platform</li>
+                <li>You must be legally permitted to use the App in your jurisdiction</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">4</div>
+            <h2>User Accounts</h2>
+        </div>
+        <p>Account creation and management rules:</p>
+        <div class="info-card green-card">
+            <h4>👤 Account Rules</h4>
+            <ul>
+                <li>You may only create <strong>one account</strong> per person. Multiple accounts are prohibited.</li>
+                <li>Account creation requires Google Sign-In. You are responsible for the security of your Google account.</li>
+                <li>You must provide accurate information and keep your account details current.</li>
+                <li>You are responsible for all activity that occurs under your account.</li>
+                <li>You must not share your account credentials or allow others to access your account.</li>
+                <li>You must notify us immediately if you suspect unauthorized access to your account.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">5</div>
+            <h2>User Conduct &amp; Obligations</h2>
+        </div>
+        <p>By using our App, you agree to the following behavioral standards:</p>
+
+        <div class="info-card green-card">
+            <h4>✅ You Agree To</h4>
+            <ul>
+                <li>Use the App only for its intended purpose (mutual app testing)</li>
+                <li>Test apps honestly and provide genuine feedback</li>
+                <li>Respect other community members</li>
+                <li>Follow all Pack rules and daily check-in requirements</li>
+                <li>Only list apps that you own or have authorization to list</li>
+                <li>Keep your testing links active and functional</li>
+            </ul>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>🚫 Prohibited Activities</h4>
+            <p>You must NOT:</p>
+            <ul>
+                <li>Create multiple accounts or use fake identities</li>
+                <li>Manipulate the Sparks system through fraudulent means</li>
+                <li>Use bots, scripts, or automation to interact with the App</li>
+                <li>Submit fake testing proofs or false check-ins</li>
+                <li>List apps that violate Google Play policies (malware, spam, deceptive apps)</li>
+                <li>Harass, bully, or abuse other community members</li>
+                <li>Attempt to reverse-engineer, hack, or exploit the App</li>
+                <li>Spam the platform with duplicate or low-quality listings</li>
+                <li>Share or sell your account to others</li>
+                <li>Circumvent any platform restrictions, bans, or cooldowns</li>
+                <li>Use the platform for any illegal activity</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Enforcement</h4>
+            <p>Violation of these rules may result in: warnings, Sparks deduction, temporary suspension, permanent ban, or Trust Score reduction — at our sole discretion depending on severity.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">6</div>
+            <h2>Sparks (Virtual Credits)</h2>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>💰 Important: Sparks Have NO Real-World Monetary Value</h4>
+            <p>Sparks are a virtual, in-app credit system used exclusively within AiTricker Testers. Sparks:</p>
+            <ul>
+                <li>Have <strong>absolutely no real-world monetary value</strong></li>
+                <li>Cannot be converted to real money, cryptocurrency, or any other currency</li>
+                <li>Cannot be sold, traded, or transferred to other users</li>
+                <li>Cannot be withdrawn, cashed out, or redeemed for cash</li>
+                <li>Cannot be transferred between accounts</li>
+                <li>Are non-refundable (they are earned, not purchased)</li>
+            </ul>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>📈 Earning Sparks</h4>
+            <ul>
+                <li><strong>Quick List Testing:</strong> Earn 12 Sparks per app tested (Free users: 12/day cap, Basic: 15/day, Premium: 20/day)</li>
+                <li><strong>Pack Completion:</strong> Earn 100 Sparks bonus upon successfully completing a 14-day Pack (free users only — paid plan users do not earn Pack completion bonus)</li>
+                <li><strong>Welcome Bonus:</strong> New users receive an initial Sparks balance upon account creation</li>
+            </ul>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>💸 Spending Sparks</h4>
+            <ul>
+                <li><strong>Quick List Listing:</strong> Costs 50 Sparks to list your app in the Quick Queue</li>
+                <li><strong>Pack Listing:</strong> Costs 80 Sparks to join a Pack with your app</li>
+            </ul>
+            <p><strong>Note:</strong> Paid plan users (Basic/Premium) do NOT spend Sparks for listings — their plans cover listing fees.</p>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Sparks Forfeiture</h4>
+            <p>We reserve the right to deduct, reset, or forfeit Sparks from your account if:</p>
+            <ul>
+                <li>You violate these Terms of Service</li>
+                <li>You engage in fraudulent activity or Sparks manipulation</li>
+                <li>Your account is terminated for policy violations</li>
+                <li>You desert an active Pack (80 Sparks investment is lost)</li>
+            </ul>
+            <p>All Sparks are permanently forfeited upon account deletion.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">7</div>
+            <h2>Pack Participation</h2>
+        </div>
+        <p>Packs are structured 14-day group testing sessions:</p>
+
+        <div class="info-card blue-card">
+            <h4>📦 Pack Rules</h4>
+            <ul>
+                <li><strong>Duration:</strong> Each Pack runs for 14 consecutive days</li>
+                <li><strong>Cost:</strong> 80 Sparks to join (free users) or free with paid plans</li>
+                <li><strong>Daily Requirement:</strong> You must complete a daily check-in by testing at least one app from your Pack every day</li>
+                <li><strong>Completion Reward:</strong> 100 Sparks + Trust Score +20 (free users); Trust Score +20 (paid users)</li>
+            </ul>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>🚫 Pack Desertion</h4>
+            <p>If you leave or are removed from an active Pack (after it has started):</p>
+            <ul>
+                <li>Your 80 Sparks investment is <strong>NOT refunded</strong></li>
+                <li>Your Trust Score is reduced by 10 points</li>
+                <li>A 24-hour cooldown is applied before you can join another Pack</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>✅ Queue Cancellation (Before Start)</h4>
+            <p>If you cancel your spot from a Pack queue <strong>before the Pack starts</strong>:</p>
+            <ul>
+                <li>Your 80 Sparks are fully refunded</li>
+                <li>No penalty is applied</li>
+                <li>No Trust Score reduction</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 8 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">8</div>
+            <h2>Quick List Testing</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>⚡ Quick List Rules</h4>
+            <ul>
+                <li><strong>Listing Cost:</strong> 50 Sparks per app (free users) or free with paid plans</li>
+                <li><strong>Daily Testing Cap:</strong> Free users: 12 apps/day, Basic: 15 apps/day, Premium: 20 apps/day</li>
+                <li><strong>Earnings:</strong> 12 Sparks per app successfully tested</li>
+                <li><strong>Queue Cancellation:</strong> If you cancel before testing begins, your 50 Sparks are fully refunded with no penalty</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 9 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">9</div>
+            <h2>User-Generated Content</h2>
+        </div>
+        <p>When you submit content to the App (app listings, descriptions, icons), you:</p>
+        <ul>
+            <li>Retain ownership of your intellectual property</li>
+            <li>Grant us a non-exclusive, worldwide, royalty-free license to display your content within the App for the purpose of facilitating testing</li>
+            <li>Represent that you have the right to submit such content</li>
+            <li>Agree that your content does not violate any third-party rights or applicable laws</li>
+            <li>Acknowledge that your listing information will be visible to other users</li>
+        </ul>
+        <p>We reserve the right to remove any content that violates these Terms, Google Play policies, or applicable laws without prior notice.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 10 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">10</div>
+            <h2>Paid Plans &amp; Billing</h2>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>💳 In-App Purchases via Google Play Billing</h4>
+            <p>The App offers paid per-app plans processed exclusively through <strong>Google Play Billing</strong>. All payment processing, security, and payment method storage is handled by Google. We do not directly handle or store any payment card information.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📦 Available Plans</h4>
+            <p><strong>Basic Plan — ₹399 per app:</strong></p>
+            <ul>
+                <li>Your app is automatically listed in the Quick Queue and the next available Pack</li>
+                <li>Daily Quick List testing cap increased to 15 apps per day</li>
+                <li>No Sparks are deducted for listing</li>
+            </ul>
+            <p style="margin-top: 12px;"><strong>Premium Plan — ₹599 per app:</strong></p>
+            <ul>
+                <li>Priority listing in both Quick Queue and Pack (higher visibility)</li>
+                <li>Daily Quick List testing cap increased to 20 apps per day</li>
+                <li>No Sparks are deducted for listing</li>
+                <li>Enhanced visibility across the platform</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Important Plan Details</h4>
+            <ul>
+                <li>Plans are <strong>one-time, per-app purchases</strong> — NOT subscriptions</li>
+                <li>Each purchase applies to a <strong>single app listing</strong> only</li>
+                <li>All users remain "free users" by default — plans are purchased per app as needed</li>
+                <li>Plans are non-transferable between apps or accounts</li>
+                <li>Pricing may change; existing purchases remain valid at the original price</li>
+            </ul>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>💸 Refunds</h4>
+            <p>Refunds for paid plans are governed by our separate <strong><a href="refund-policy.html">Refund Policy</a></strong>. Please refer to the Refund Policy page for complete details.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 11 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">11</div>
+            <h2>Trust Score &amp; Accountability</h2>
+        </div>
+        <p>Every user has a Trust Score that reflects their reliability and community standing:</p>
+
+        <div class="info-card green-card">
+            <h4>📈 Earning Trust</h4>
+            <ul>
+                <li>Completing a Pack: <strong>+20 Trust Score</strong></li>
+                <li>Consistent daily testing and check-ins</li>
+                <li>Good community standing and rule compliance</li>
+            </ul>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>📉 Losing Trust</h4>
+            <ul>
+                <li>Deserting a Pack: <strong>-10 Trust Score</strong></li>
+                <li>Submitting false testing proofs</li>
+                <li>Repeated violations of community guidelines</li>
+                <li>Abusing the reporting system</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Low Trust Score Consequences</h4>
+            <p>Users with consistently low Trust Scores may face restrictions including limited Pack access, reduced visibility, or account suspension at our discretion.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 12 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">12</div>
+            <h2>Reporting &amp; Enforcement</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>🚨 Reporting Violations</h4>
+            <p>If you encounter a user or app listing that violates these Terms, Google Play policies, or is otherwise harmful, please report it through:</p>
+            <ul>
+                <li>The in-app reporting feature (if available)</li>
+                <li>Email: aitrickertesters@gmail.com with subject "Report: [issue]"</li>
+            </ul>
+        </div>
+        <div class="info-card red-card">
+            <h4>⚖️ Enforcement Actions</h4>
+            <p>We may take the following actions at our sole discretion:</p>
+            <ul>
+                <li><strong>Warning:</strong> First-time minor violations</li>
+                <li><strong>Sparks Deduction:</strong> For Sparks-related violations</li>
+                <li><strong>Temporary Suspension:</strong> 24 hours to 30 days depending on severity</li>
+                <li><strong>Content Removal:</strong> Removal of violating app listings</li>
+                <li><strong>Permanent Ban:</strong> For severe or repeated violations</li>
+            </ul>
+            <p>We reserve the right to take action without prior notice in cases of severe violations.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 13 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">13</div>
+            <h2>Intellectual Property</h2>
+        </div>
+        <p>All intellectual property rights in the App (including but not limited to code, design, logos, trademarks, and content created by us) are owned by AiTricker Testers or our licensors.</p>
+        <ul>
+            <li>You may not copy, modify, distribute, sell, or lease any part of the App</li>
+            <li>You may not reverse-engineer or attempt to extract source code from the App</li>
+            <li>The "AiTricker Testers" name, logo, and branding are our trademarks</li>
+            <li>User-submitted content remains the property of the respective users</li>
+        </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 14 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">14</div>
+            <h2>Disclaimers</h2>
+        </div>
+        <div class="info-card amber-card">
+            <h4>⚠️ "AS IS" Service</h4>
+            <p>The App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, either express or implied. We disclaim all warranties including but not limited to:</p>
+            <ul>
+                <li>Merchantability and fitness for a particular purpose</li>
+                <li>Uninterrupted, error-free, or secure operation</li>
+                <li>Accuracy or reliability of any content</li>
+                <li>That the App will meet your specific requirements</li>
+            </ul>
+        </div>
+        <div class="info-card gray-card">
+            <h4>📌 Platform Role</h4>
+            <p>We act solely as a platform connecting developers and testers. We are not responsible for the quality, safety, legality, or functionality of any apps listed on our platform. We do not endorse any listed apps.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 15 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">15</div>
+            <h2>Limitation of Liability</h2>
+        </div>
+        <div class="info-card red-card">
+            <h4>⚖️ Liability Cap</h4>
+            <p>To the maximum extent permitted by applicable law, AiTricker Testers and its developers, officers, and affiliates shall NOT be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Any loss of profits, data, use, goodwill, or other intangible losses</li>
+                <li>Damages arising from your use or inability to use the App</li>
+                <li>Unauthorized access to or alteration of your data</li>
+                <li>Any third-party conduct or content on the platform</li>
+                <li>Any bugs, viruses, or other harmful code transmitted through the App</li>
+            </ul>
+            <p>Our total aggregate liability for any claims shall not exceed the amount you paid us in the 12 months preceding the claim, or ₹599, whichever is less.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 16 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">16</div>
+            <h2>Indemnification</h2>
+        </div>
+        <p>You agree to indemnify, defend, and hold harmless AiTricker Testers, its developers, affiliates, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorney's fees) arising out of or relating to:</p>
+        <ul>
+            <li>Your violation of these Terms</li>
+            <li>Your use or misuse of the App</li>
+            <li>Your violation of any third-party rights</li>
+            <li>Any content you submit or post through the App</li>
+            <li>Your violation of any applicable law or regulation</li>
+        </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 17 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">17</div>
+            <h2>Termination</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>👤 User-Initiated Termination</h4>
+            <p>You may terminate your account at any time by requesting account deletion through the App's Settings or by contacting us at aitrickertesters@gmail.com. Upon termination, all Sparks are forfeited and all data is deleted per our Privacy Policy.</p>
+        </div>
+        <div class="info-card red-card">
+            <h4>🚫 Our Right to Terminate</h4>
+            <p>We reserve the right to suspend or terminate your account at any time, with or without notice, for any reason including but not limited to:</p>
+            <ul>
+                <li>Violation of these Terms</li>
+                <li>Fraudulent or illegal activity</li>
+                <li>Abuse of the platform or other users</li>
+                <li>Extended inactivity (accounts inactive for more than 12 months)</li>
+                <li>At our sole discretion for any reason</li>
+            </ul>
+        </div>
+        <div class="info-card amber-card">
+            <h4>⚠️ Effect of Termination</h4>
+            <p>Upon termination: all Sparks are forfeited, all app listings are removed, access to the App is revoked, and applicable sections of these Terms survive termination (including Disclaimers, Limitation of Liability, and Indemnification).</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 18 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">18</div>
+            <h2>Governing Law &amp; Disputes</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>⚖️ Jurisdiction</h4>
+            <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law provisions.</p>
+            <p>Any disputes arising from or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the courts in India.</p>
+            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 19 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">19</div>
+            <h2>Changes to These Terms</h2>
+        </div>
+        <p>We reserve the right to modify these Terms at any time. When we make changes:</p>
+        <ul>
+            <li>We will update the "Last Updated" date at the top of this page</li>
+            <li>For material changes, we will notify users via in-app notification</li>
+            <li>Continued use of the App after changes constitutes acceptance</li>
+            <li>If you disagree with updated Terms, you must stop using the App</li>
+        </ul>
+        <p>We encourage you to review these Terms periodically.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 20 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num blue">20</div>
+            <h2>Contact Us</h2>
+        </div>
+        <p>If you have any questions about these Terms &amp; Conditions, please contact us:</p>
+
+        <div class="contact-card blue-contact">
+            <h3>Contact Information</h3>
+            <p><strong>App:</strong> AiTricker Testers<br>
+            <strong>Email:</strong> aitrickertesters@gmail.com<br>
+            <strong>Subject:</strong> Terms &amp; Conditions Inquiry</p>
+            <a href="mailto:aitrickertesters@gmail.com">📧 Contact Support</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>These Terms &amp; Conditions are effective as of May 27, 2026 and apply to the AiTricker Testers mobile application available on Google Play Store.</p>
+        <p>© 2026 AiTricker Testers. All rights reserved.</p>
+    </div>
+
+</div><!-- end main-content -->
+
+</body>
+</html>

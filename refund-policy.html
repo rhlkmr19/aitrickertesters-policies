@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy — AiTricker Testers</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #374151;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+.top-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.top-nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tabs {
+    display: flex;
+    gap: 4px;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 12px;
+}
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.tab-btn:hover {
+    color: #374151;
+    background: #e5e7eb;
+}
+.tab-btn.active {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+.header-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    border: 1px solid;
+}
+.header-card.green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.header-card.blue {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.header-card.amber {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.header-card h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+.header-card .subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+.header-card .date {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+}
+.section {
+    margin-bottom: 32px;
+}
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.section-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.section-num.green { background: #10b981; }
+.section-num.blue { background: #3b82f6; }
+.section-num.amber { background: #f59e0b; }
+.section-head h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+.section p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 14px;
+}
+.info-card {
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 14px 0;
+    border: 1px solid;
+}
+.info-card.green-card {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+.info-card.blue-card {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+.info-card.amber-card {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+.info-card.red-card {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+.info-card.purple-card {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+}
+.info-card.gray-card {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+}
+.info-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.info-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.info-card p:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 22px; margin: 10px 0 14px; }
+li { font-size: 14px; color: #4b5563; padding: 4px 0; line-height: 1.6; }
+li strong { color: #111827; }
+.divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+.contact-card {
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 32px;
+}
+.contact-card.green-contact {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.contact-card.blue-contact {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.contact-card.amber-contact {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.contact-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+.contact-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+.contact-card a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 12px;
+}
+.contact-card.green-contact a { background: #10b981; }
+.contact-card.blue-contact a { background: #3b82f6; }
+.contact-card.amber-contact a { background: #f59e0b; }
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+.toc {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+.toc h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.toc ol {
+    padding-left: 20px;
+    margin: 0;
+}
+.toc li {
+    font-size: 13px;
+    color: #4b5563;
+    padding: 4px 0;
+}
+@media (max-width: 600px) {
+    .top-nav-inner { flex-direction: column; align-items: stretch; }
+    .tabs { overflow-x: auto; }
+    .header-card { padding: 24px 20px; }
+    .header-card h1 { font-size: 24px; }
+    .main-content { padding: 24px 16px 40px; }
+}
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="top-nav">
+    <div class="top-nav-inner">
+        <div class="brand">
+            <div class="brand-icon">AT</div>
+            <span>AiTricker Testers</span>
+        </div>
+        <div class="tabs">
+            <a class="tab-btn" href="index.html">Privacy Policy</a>
+            <a class="tab-btn" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="tab-btn active" href="refund-policy.html">Refund Policy</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <div class="header-card amber">
+        <h1>Refund Policy</h1>
+        <p class="subtitle">AiTricker Testers Mobile Application</p>
+        <p class="date">Last Updated: May 27, 2026</p>
+        <div class="badges">
+            <span class="badge">🔒 Secure Payments via Google Play</span>
+            <span class="badge">📋 Clear Refund Terms</span>
+            <span class="badge">🌐 International Users</span>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <p style="font-size: 15px; color: #4b5563; margin-bottom: 12px;">
+        Thank you for choosing AiTricker Testers. Our mobile application offers two paid per-app testing plans: <strong>Basic (₹399)</strong> and <strong>Premium (₹599)</strong>. Please read this Refund Policy carefully before making a purchase. By purchasing any of our testing plans, you acknowledge that you have read, understood, and agree to be bound by this policy.
+    </p>
+    <div class="info-card amber-card">
+        <h4>⚠️ Important</h4>
+        <p>By purchasing our testing plans, you agree to the terms outlined in this refund policy. All payments are processed securely through Google Play Billing. We do not directly handle any payment card information.</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li>Paid Plans Overview</li>
+            <li>Refund Conditions</li>
+            <li>Non-Refundable Items</li>
+            <li>Queue Cancellation &amp; Sparks</li>
+            <li>How to Request a Refund</li>
+            <li>Processing &amp; Timeline</li>
+            <li>Exclusions &amp; Exceptions</li>
+            <li>Contact Information</li>
+        </ol>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">1</div>
+            <h2>Paid Plans Overview</h2>
+        </div>
+        <p>AiTricker Testers offers the following per-app paid plans, processed exclusively through Google Play Billing:</p>
+
+        <div class="info-card blue-card">
+            <h4>📦 Basic Plan — ₹399 per app</h4>
+            <ul>
+                <li>Your app is automatically listed in the Quick Queue and the next available Pack</li>
+                <li>Daily Quick List testing cap increased to 15 apps per day</li>
+                <li>No Sparks are deducted for listing</li>
+                <li>One-time purchase per app (not a subscription)</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⭐ Premium Plan — ₹599 per app</h4>
+            <ul>
+                <li>Priority listing in both Quick Queue and Pack (higher visibility)</li>
+                <li>Daily Quick List testing cap increased to 20 apps per day</li>
+                <li>No Sparks are deducted for listing</li>
+                <li>Enhanced visibility across the platform</li>
+                <li>One-time purchase per app (not a subscription)</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📌 Key Information</h4>
+            <ul>
+                <li>Both plans are <strong>one-time per-app purchases</strong> — NOT subscriptions</li>
+                <li>Each purchase applies to a single app listing only</li>
+                <li>All users remain "free users" by default; plans are purchased per app as needed</li>
+                <li>Plans are non-transferable between apps or accounts</li>
+                <li>All payments are processed securely through Google Play Billing</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">2</div>
+            <h2>Refund Conditions</h2>
+        </div>
+        <p>A refund may be applicable in the following cases:</p>
+
+        <div class="info-card green-card">
+            <h4>✅ Eligible for Refund</h4>
+            <ul>
+                <li><strong>Service Not Delivered:</strong> Your app was not listed in the Quick Queue or Pack within 24 hours of purchase due to a platform error or technical issue on our end.</li>
+                <li><strong>Technical Failure:</strong> A technical issue on our end prevented your paid plan benefits from being applied to your app (e.g., daily cap not increased, priority not applied).</li>
+                <li><strong>Duplicate Purchase:</strong> You were accidentally charged twice for the same app and same plan.</li>
+                <li><strong>Unauthorized Transaction:</strong> The purchase was made without your authorization (unauthorized access to your account or device).</li>
+                <li><strong>Wrong Plan Purchased:</strong> You accidentally purchased the wrong plan and contact us within 24 hours before any benefits are consumed.</li>
+            </ul>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>❌ Not Eligible for Refund</h4>
+            <ul>
+                <li><strong>Change of Mind:</strong> You changed your mind after purchasing a plan.</li>
+                <li><strong>App Store Rejection:</strong> Your app was rejected by Google Play (we do not guarantee app store approvals or testing outcomes).</li>
+                <li><strong>Expected Testers:</strong> You did not receive the number of testers you expected (we facilitate connections, not guaranteed outcomes).</li>
+                <li><strong>Policy Violations:</strong> You were removed from a Pack or had your listing removed due to violations of our Terms &amp; Conditions.</li>
+                <li><strong>Consumed Services:</strong> Your app has already been listed, tested by community members, or received any benefit from the paid plan.</li>
+                <li><strong>Account Termination:</strong> Your account was terminated due to violations of our policies.</li>
+                <li><strong>Third-Party Issues:</strong> Issues caused by your device, internet connection, Google account, or other factors outside our control.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">3</div>
+            <h2>Non-Refundable Items</h2>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>💰 Sparks (Virtual Credits) — Non-Refundable</h4>
+            <p>Sparks are a virtual, in-app credit system with <strong>absolutely no real-world monetary value</strong>. Sparks:</p>
+            <ul>
+                <li>Are earned through testing activity (not purchased with real money)</li>
+                <li>Cannot be refunded, withdrawn, exchanged, or converted to real money</li>
+                <li>Cannot be sold, traded, or transferred between users or accounts</li>
+                <li>Are forfeited permanently upon account deletion or termination</li>
+            </ul>
+            <p>This Refund Policy applies <strong>only</strong> to paid plans (Basic ₹399 and Premium ₹599), NOT to Sparks.</p>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Consumed Services</h4>
+            <p>If your app has already received ANY benefit from the paid plan — including being listed in the queue, being tested by even one community member, or having the daily cap increase applied — the service is considered <strong>consumed</strong> and is not eligible for a monetary refund.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">4</div>
+            <h2>Queue Cancellation &amp; Sparks</h2>
+        </div>
+        <p>This section applies to <strong>free users</strong> who use Sparks (not real money) to list their apps. This is NOT a monetary refund — it is a virtual credit return within the app:</p>
+
+        <div class="info-card blue-card">
+            <h4>🔄 Quick Queue Cancellation</h4>
+            <p>If you cancel your app from the Quick Queue <strong>before testing begins</strong>:</p>
+            <ul>
+                <li>Your 50 Sparks are fully returned to your balance</li>
+                <li>No penalty is applied</li>
+                <li>No Trust Score impact</li>
+            </ul>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>🔄 Pack Queue Cancellation</h4>
+            <p>If you cancel from a Pack queue <strong>before the Pack starts</strong>:</p>
+            <ul>
+                <li>Your 80 Sparks are fully returned to your balance</li>
+                <li>No penalty is applied</li>
+                <li>No Trust Score impact</li>
+            </ul>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>🚫 Active Pack Desertion</h4>
+            <p>If you desert an active Pack (after it has already started):</p>
+            <ul>
+                <li>The 80 Sparks investment is <strong>NOT returned</strong></li>
+                <li>Your Trust Score is reduced by 10 points</li>
+                <li>A 24-hour cooldown is applied before you can join another Pack</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">5</div>
+            <h2>How to Request a Refund</h2>
+        </div>
+
+        <div class="info-card purple-card">
+            <h4>📱 Option 1: Via Google Play (Within 48 Hours)</h4>
+            <p>If your purchase was made <strong>less than 48 hours ago</strong>, you can request a refund directly through Google Play:</p>
+            <ol style="padding-left: 20px; margin-top: 8px;">
+                <li>Open the <strong>Google Play Store</strong> app on your device</li>
+                <li>Tap your <strong>profile icon</strong> (top right)</li>
+                <li>Go to <strong>Payments &amp; subscriptions</strong></li>
+                <li>Tap <strong>Budget &amp; order history</strong></li>
+                <li>Find the AiTricker Testers purchase</li>
+                <li>Tap <strong>Request a refund</strong> or <strong>Report a problem</strong></li>
+                <li>Follow the on-screen instructions</li>
+            </ol>
+            <p style="margin-top: 8px;"><strong>Note:</strong> Google may approve or deny the refund at their discretion within this 48-hour window.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>📧 Option 2: Via Email (After 48 Hours or Complex Issues)</h4>
+            <p>If more than 48 hours have passed, or if your issue requires our direct involvement, contact us at <strong>aitrickertesters@gmail.com</strong> with the following information:</p>
+            <ul>
+                <li>Your registered email address (Google account used in the App)</li>
+                <li>The app name and package name for which the plan was purchased</li>
+                <li>Plan purchased (Basic ₹399 or Premium ₹599)</li>
+                <li>Google Play order number (found in your purchase confirmation email or Play Store order history)</li>
+                <li>Date of purchase</li>
+                <li>Detailed reason for the refund request</li>
+                <li>Any supporting screenshots or evidence (if applicable)</li>
+            </ul>
+            <p style="margin-top: 8px;"><strong>Email Subject Line:</strong> "Refund Request — [Your App Name]"</p>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⏱️ Timeframe for Requests</h4>
+            <p>Refund requests must be submitted within <strong>14 days</strong> of the original purchase date. Requests made after 14 days will generally not be considered, except in cases of unauthorized transactions (which must be reported within 120 days per Google Play's policy).</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">6</div>
+            <h2>Processing &amp; Timeline</h2>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>⏳ Review Period</h4>
+            <p>We aim to review and respond to all refund requests within <strong>3–5 business days</strong> of receiving the request. Complex cases may take up to 7 business days.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>💳 Refund Processing</h4>
+            <p>If your refund is approved:</p>
+            <ul>
+                <li>The refund will be processed through the <strong>original payment method</strong> (Google Play Billing)</li>
+                <li>Refunds typically take <strong>5–7 business days</strong> from the date of approval to appear in your account</li>
+                <li>The exact timeline depends on your payment provider (bank, UPI, card issuer)</li>
+                <li>You will receive a confirmation email once the refund is processed</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>📌 Refund Amount</h4>
+            <p>We do <strong>not</strong> offer partial refunds. All approved refunds are for the <strong>full purchase amount</strong> of the plan (₹399 for Basic or ₹599 for Premium). Google Play's service fees may apply as per Google's policies.</p>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>🔄 After Refund is Processed</h4>
+            <p>Once a refund is processed:</p>
+            <ul>
+                <li>The paid plan benefits for that app are immediately revoked</li>
+                <li>Your app listing may be removed from the queue (if not already tested)</li>
+                <li>Your daily testing cap reverts to the free tier (12/day)</li>
+                <li>No Sparks penalty is applied for the refund</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">7</div>
+            <h2>Exclusions &amp; Exceptions</h2>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>🚨 Fraudulent Requests</h4>
+            <p>We reserve the right to deny any refund request that:</p>
+            <ul>
+                <li>Does not meet the conditions outlined in this policy</li>
+                <li>Appears to be fraudulent or made in bad faith</li>
+                <li>Is part of a pattern of abuse (repeated purchases followed by refund requests)</li>
+                <li>Contains false or misleading information</li>
+            </ul>
+            <p><strong>Consequence:</strong> Submitting false or fraudulent refund claims may result in immediate account suspension or permanent termination.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>🔍 Company's Discretion</h4>
+            <p>In exceptional cases not explicitly covered by this policy, please contact our support team. We will review the circumstances on a case-by-case basis and decide at our sole discretion. We strive to be fair and reasonable in all refund decisions.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>🌍 Regional Consumer Protection Laws</h4>
+            <p>If you are located in a jurisdiction that provides additional consumer protection rights, those rights apply in addition to this policy:</p>
+            <ul>
+                <li><strong>EU/EEA Users:</strong> You may have a 14-day cooling-off period under EU consumer protection law for digital content purchases, subject to certain exceptions once the service is delivered.</li>
+                <li><strong>Australian Users:</strong> Australian Consumer Law provides guarantees that cannot be excluded.</li>
+                <li><strong>Indian Users:</strong> Consumer Protection Act, 2019 rights apply.</li>
+            </ul>
+            <p>Nothing in this Refund Policy is intended to limit your statutory rights under applicable law.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 8 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num amber">8</div>
+            <h2>Contact Information</h2>
+        </div>
+        <p>If you have any questions about this Refund Policy or wish to submit a refund request, please contact us:</p>
+
+        <div class="contact-card amber-contact">
+            <h3>Contact Information</h3>
+            <p><strong>App:</strong> AiTricker Testers<br>
+            <strong>Email:</strong> aitrickertesters@gmail.com<br>
+            <strong>Subject:</strong> Refund Request — [Your App Name]<br>
+            <strong>Response Time:</strong> 3–5 business days</p>
+            <a href="mailto:aitrickertesters@gmail.com">📧 Contact Support</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>This Refund Policy is effective as of May 27, 2026 and applies specifically to the AiTricker Testers mobile application available on Google Play Store.</p>
+        <p>© 2026 AiTricker Testers. All rights reserved.</p>
+    </div>
+
+</div><!-- end main-content -->
+
+</body>
+</html>

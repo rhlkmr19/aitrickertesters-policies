@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — AiTricker Testers</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #374151;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+.top-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.top-nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tabs {
+    display: flex;
+    gap: 4px;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 12px;
+}
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.tab-btn:hover {
+    color: #374151;
+    background: #e5e7eb;
+}
+.tab-btn.active {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+.header-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    border: 1px solid;
+}
+.header-card.green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.header-card.blue {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.header-card.amber {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.header-card h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+.header-card .subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+.header-card .date {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+}
+.section {
+    margin-bottom: 32px;
+}
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.section-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.section-num.green { background: #10b981; }
+.section-num.blue { background: #3b82f6; }
+.section-num.amber { background: #f59e0b; }
+.section-head h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+.section p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 14px;
+}
+.info-card {
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 14px 0;
+    border: 1px solid;
+}
+.info-card.green-card {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+.info-card.blue-card {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+.info-card.amber-card {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+.info-card.red-card {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+.info-card.purple-card {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+}
+.info-card.gray-card {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+}
+.info-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.info-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.info-card p:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 22px; margin: 10px 0 14px; }
+li { font-size: 14px; color: #4b5563; padding: 4px 0; line-height: 1.6; }
+li strong { color: #111827; }
+.divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+.contact-card {
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 32px;
+}
+.contact-card.green-contact {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+}
+.contact-card.blue-contact {
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.contact-card.amber-contact {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.contact-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+.contact-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+.contact-card a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 12px;
+}
+.contact-card.green-contact a { background: #10b981; }
+.contact-card.blue-contact a { background: #3b82f6; }
+.contact-card.amber-contact a { background: #f59e0b; }
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+.toc {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+.toc h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.toc ol {
+    padding-left: 20px;
+    margin: 0;
+}
+.toc li {
+    font-size: 13px;
+    color: #4b5563;
+    padding: 4px 0;
+}
+@media (max-width: 600px) {
+    .top-nav-inner { flex-direction: column; align-items: stretch; }
+    .tabs { overflow-x: auto; }
+    .header-card { padding: 24px 20px; }
+    .header-card h1 { font-size: 24px; }
+    .main-content { padding: 24px 16px 40px; }
+}
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="top-nav">
+    <div class="top-nav-inner">
+        <div class="brand">
+            <div class="brand-icon">AT</div>
+            <span>AiTricker Testers</span>
+        </div>
+        <div class="tabs">
+            <a class="tab-btn active" href="index.html">Privacy Policy</a>
+            <a class="tab-btn" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="tab-btn" href="refund-policy.html">Refund Policy</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <div class="header-card green">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">AiTricker Testers Mobile Application</p>
+        <p class="date">Last Updated: May 27, 2026</p>
+        <div class="badges">
+            <span class="badge">✅ GDPR Compliant</span>
+            <span class="badge">🔒 Data Protected</span>
+            <span class="badge">🌐 International Users</span>
+            <span class="badge">🛡️ Firebase Secured</span>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <p style="font-size: 15px; color: #4b5563; margin-bottom: 12px;">
+        Welcome to <strong>AiTricker Testers</strong> ("the App", "we", "us", or "our"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy describes how we collect, use, disclose, store, and safeguard your information when you use our mobile application and any related services (collectively, the "Services").
+    </p>
+    <div class="info-card amber-card">
+        <h4>⚠️ Important Notice</h4>
+        <p>By using our Services, you agree to the collection and use of your information in accordance with this Privacy Policy. If you do not agree with any part of this policy, please discontinue use of our Services immediately.</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li>Introduction &amp; Developer Information</li>
+            <li>Age Requirement</li>
+            <li>Information We Collect</li>
+            <li>How We Use Your Information</li>
+            <li>Information Sharing &amp; Disclosure</li>
+            <li>International Data Transfers</li>
+            <li>Data Retention</li>
+            <li>Your Rights &amp; Choices</li>
+            <li>Account Deletion</li>
+            <li>Security Measures</li>
+            <li>User-Posted Content</li>
+            <li>Children's Privacy</li>
+            <li>Third-Party Services &amp; SDKs</li>
+            <li>Changes to This Policy</li>
+            <li>Contact Us</li>
+        </ol>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">1</div>
+            <h2>Introduction &amp; Developer Information</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>📋 Developer Details</h4>
+            <p><strong>App Name:</strong> AiTricker Testers</p>
+            <p><strong>Developer:</strong> AiTricker Testers</p>
+            <p><strong>Contact Email:</strong> aitrickertesters@gmail.com</p>
+            <p><strong>Jurisdiction:</strong> Based in India, available to users worldwide</p>
+            <p><strong>Platform:</strong> Android (Google Play Store)</p>
+        </div>
+        <p>AiTricker Testers is a mutual testing community platform that connects Android app developers with real testers. Developers list their apps for closed testing, and other community members test those apps in exchange for Sparks (virtual credits). The platform facilitates testing through Quick Listings and structured Pack sessions.</p>
+        <p>This Privacy Policy applies to all users of the AiTricker Testers mobile application, regardless of location or device. It covers all features of the App including account creation, app listing, Pack participation, Quick List testing, Sparks economy, and in-app purchases.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">2</div>
+            <h2>Age Requirement</h2>
+        </div>
+        <div class="info-card red-card">
+            <h4>🚫 Age Restriction</h4>
+            <p>Our App is intended for users who are <strong>at least 13 years of age</strong>. We do not knowingly collect personal information from children under the age of 13.</p>
+            <p>If you are under 13, you must not use the App, create an account, or submit any personal data to us. If you are between 13 and 18, you should review this policy with a parent or guardian.</p>
+            <p>If we become aware that we have inadvertently collected personal data from a child under 13, we will take immediate steps to delete such information and terminate the associated account.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">3</div>
+            <h2>Information We Collect</h2>
+        </div>
+        <p>We collect personal and non-personal information from you to provide, maintain, and improve our Services. Below is a detailed breakdown of all data we collect:</p>
+
+        <div class="info-card green-card">
+            <h4>👤 Account Information (via Google Sign-In)</h4>
+            <p><strong>Email Address:</strong> Collected automatically via Google Sign-In when you create your account. This serves as your unique identifier and is used for authentication, communication, and account recovery.</p>
+            <p><strong>Display Name:</strong> Your name as set in your Google account. Displayed to other community members in Packs, Quick Lists, and leaderboards.</p>
+            <p><strong>Profile Photo:</strong> Your Google profile picture. Displayed alongside your name in the community.</p>
+            <p><strong>Google User ID:</strong> A unique identifier provided by Google for authentication purposes.</p>
+            <p><strong>Note:</strong> We do NOT store your Google password. We only receive and store OAuth authentication tokens provided by Google Sign-In.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📱 Developer App Details</h4>
+            <p>If you list an app for testing on our platform, we collect the following information that you voluntarily provide:</p>
+            <ul>
+                <li><strong>App Name</strong> — The name of your application</li>
+                <li><strong>Package Name</strong> — The unique Android package identifier (e.g., com.example.myapp)</li>
+                <li><strong>Play Store Link</strong> — URL to your app's Google Play Store listing</li>
+                <li><strong>Closed Testing Link</strong> — The opt-in URL for your app's closed testing track</li>
+                <li><strong>App Icon URL</strong> — Link to your app's icon image</li>
+                <li><strong>App Description</strong> — A brief description of your app you provide</li>
+            </ul>
+            <p>This information is visible to other users of the App for the purpose of facilitating testing.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>📊 Usage &amp; Activity Data</h4>
+            <p>We collect data about your participation and activity within the App to operate platform features and enforce accountability:</p>
+            <ul>
+                <li><strong>Pack Activity:</strong> Which Packs you join, daily check-in status, completion or desertion status, timestamps</li>
+                <li><strong>Quick List Activity:</strong> Apps you test, testing timestamps, daily testing count</li>
+                <li><strong>Sparks Transactions:</strong> Sparks earned (from testing), Sparks spent (on listings), transaction history with timestamps</li>
+                <li><strong>Trust Score:</strong> Your current Trust Score value and history of changes (increases and decreases)</li>
+                <li><strong>Warnings &amp; Cooldowns:</strong> Any warnings issued, cooldown periods applied, and their reasons</li>
+                <li><strong>Queue Status:</strong> Your position in Quick Queue and Pack queues</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>💳 Payment &amp; Transaction Information</h4>
+            <p><strong>Payment Method:</strong> We use Google Play Billing exclusively for processing all in-app purchases (Basic ₹399 and Premium ₹599 per-app plans). Google Play Billing handles all payment processing.</p>
+            <p><strong>What We Store:</strong> We only store the following minimal transaction data:</p>
+            <ul>
+                <li>Transaction amount (₹399 or ₹599)</li>
+                <li>Plan type purchased (Basic or Premium)</li>
+                <li>The app for which the plan was purchased</li>
+                <li>User ID of the purchaser</li>
+                <li>Date and time of purchase</li>
+                <li>Google Play order ID (for verification and support purposes)</li>
+            </ul>
+            <p><strong>What We Do NOT Store:</strong> We do NOT store, access, or process credit card numbers, debit card numbers, bank account details, UPI IDs, or any other payment method information. All payment processing is handled entirely by Google Play Billing.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>🔔 Push Notification Data</h4>
+            <p>We request permission to send push notifications to your device via Firebase Cloud Messaging (FCM). If granted, we store:</p>
+            <ul>
+                <li><strong>FCM Token:</strong> A device-specific token used to deliver push notifications to your device</li>
+                <li><strong>Notification Preferences:</strong> Your settings for which types of notifications you want to receive</li>
+            </ul>
+            <p>Notifications are used for: Pack updates and reminders, testing reminders, Spark transaction alerts, important service announcements, and community updates.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>📈 Analytics &amp; Crash Data</h4>
+            <p>We use the following Firebase services to collect anonymized usage metrics and crash reports:</p>
+            <p><strong>Firebase Analytics:</strong> Collects anonymized usage data including session duration, feature interactions, screen views, and general usage patterns. This data is aggregated and does not personally identify you.</p>
+            <p><strong>Firebase Crashlytics:</strong> Automatically collects crash reports when the App encounters errors. This includes device model, OS version, stack traces, and app state at the time of crash. This helps us identify and fix bugs quickly.</p>
+            <p><strong>Important:</strong> No personally identifiable information (PII) is intentionally shared with analytics services. All analytics data is anonymized and aggregated.</p>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>📱 Device Information</h4>
+            <p>Through Firebase services, the following device information may be automatically collected:</p>
+            <ul>
+                <li>Device model and manufacturer</li>
+                <li>Android OS version</li>
+                <li>App version installed</li>
+                <li>Language and locale settings</li>
+                <li>Time zone</li>
+                <li>Network type (WiFi/Mobile data — not IP address for user identification)</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">4</div>
+            <h2>How We Use Your Information</h2>
+        </div>
+        <p>We use the information we collect for the following specific purposes:</p>
+
+        <div class="info-card green-card">
+            <h4>🔧 To Provide &amp; Maintain Our Services</h4>
+            <ul>
+                <li>Creating and managing your user account</li>
+                <li>Authenticating your identity via Google Sign-In</li>
+                <li>Displaying your listed apps to other community members</li>
+                <li>Facilitating Pack-based testing (matching developers with testers)</li>
+                <li>Managing the Quick Listing queue</li>
+                <li>Tracking daily check-ins and testing completion</li>
+                <li>Ensuring core app functionality works correctly</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>💰 To Manage the Sparks Economy</h4>
+            <ul>
+                <li>Tracking Sparks earned through testing activities</li>
+                <li>Deducting Sparks spent on app listings (50 for Quick List, 80 for Pack)</li>
+                <li>Processing Sparks refunds when users cancel from queues before testing begins</li>
+                <li>Enforcing accountability rules (missed day tracking, warnings, cooldowns)</li>
+                <li>Calculating and updating Trust Score based on user behavior</li>
+            </ul>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>💳 To Process Transactions</h4>
+            <ul>
+                <li>Recording transaction history for Basic and Premium plan purchases</li>
+                <li>Verifying purchase status to apply paid plan benefits</li>
+                <li>Providing purchase receipts and transaction records for support inquiries</li>
+                <li>Processing refund requests when eligible</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📊 To Improve &amp; Customize the App</h4>
+            <ul>
+                <li>Analyzing anonymized usage patterns to improve features</li>
+                <li>Identifying and fixing crashes and bugs via Crashlytics</li>
+                <li>Understanding which features are most used to prioritize development</li>
+                <li>Optimizing app performance and user experience</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📧 To Communicate with You</h4>
+            <ul>
+                <li>Sending push notifications about Pack activity (start, check-in reminders, completion)</li>
+                <li>Notifying you of Spark balance changes</li>
+                <li>Important service announcements (policy changes, maintenance)</li>
+                <li>Responding to support inquiries and refund requests</li>
+            </ul>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>⚖️ To Comply with Legal Obligations</h4>
+            <ul>
+                <li>Responding to valid legal requests (subpoenas, court orders)</li>
+                <li>Enforcing our Terms of Service</li>
+                <li>Protecting our rights, property, or safety</li>
+                <li>Preventing fraud or abuse of our platform</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">5</div>
+            <h2>Information Sharing &amp; Disclosure</h2>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>🔒 We Do NOT Sell Your Data</h4>
+            <p>We do <strong>not</strong> sell, rent, trade, or otherwise transfer your personal information to third parties for monetary consideration under any circumstances. Your data is never used for advertising purposes by third parties.</p>
+        </div>
+
+        <p>However, we may share certain information in the following limited and necessary circumstances:</p>
+
+        <div class="info-card blue-card">
+            <h4>👥 With Other Community Members</h4>
+            <ul>
+                <li><strong>Pack Members:</strong> Your display name, profile photo, and app name are visible to members of Packs you join. This is necessary for the collaborative testing process.</li>
+                <li><strong>Quick Apps Feed:</strong> If you list an app, your display name and app details (name, icon, description, testing link) are visible to all community members browsing the Quick Apps feed.</li>
+                <li><strong>Leaderboards:</strong> Your name and relevant stats may appear in community leaderboards if applicable.</li>
+            </ul>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>🛠️ With Service Providers</h4>
+            <p>We use the following third-party services that may process your data:</p>
+            <ul>
+                <li><strong>Google Firebase:</strong> Authentication, Cloud Firestore (database), Cloud Functions (backend logic), Firebase Cloud Messaging (notifications), Firebase Analytics, Firebase Crashlytics. Google's Privacy Policy governs their handling of data: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                <li><strong>Google Play Billing:</strong> Payment processing for in-app purchases. Google handles all payment data per their terms.</li>
+            </ul>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>🏢 Business Transfers</h4>
+            <p>If AiTricker Testers is involved in a merger, acquisition, reorganization, or asset sale, your personal data may be transferred as part of that transaction. We will provide notice before your data is transferred and becomes subject to a different privacy policy.</p>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>⚖️ Legal Compliance</h4>
+            <p>We may disclose your information if required to do so by law or in response to valid legal requests by public authorities (e.g., a court order, government request, or subpoena). We may also disclose information to protect our rights, enforce our policies, or protect the safety of our users.</p>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>✅ With Your Consent</h4>
+            <p>We may share your information for purposes not listed above only with your explicit, informed consent.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">6</div>
+            <h2>International Data Transfers</h2>
+        </div>
+        <p>Your personal data may be transferred to and stored on servers located outside of your country of residence. Specifically:</p>
+        <div class="info-card blue-card">
+            <h4>🌍 Where Your Data May Be Processed</h4>
+            <p>Our App uses Google Firebase infrastructure, which may store and process data in the United States and other countries where Google operates data centers.</p>
+            <p>We take reasonable steps to ensure that your data is treated securely and in accordance with this Privacy Policy and applicable data protection laws, including:</p>
+            <ul>
+                <li>The EU General Data Protection Regulation (GDPR)</li>
+                <li>The California Consumer Privacy Act (CCPA)</li>
+                <li>India's Digital Personal Data Protection Act (DPDPA)</li>
+                <li>Other applicable regional data protection laws</li>
+            </ul>
+            <p>By using our Services, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">7</div>
+            <h2>Data Retention</h2>
+        </div>
+        <p>We retain your personal data only as long as necessary for the purposes outlined in this Privacy Policy, to fulfill legal obligations, or to enforce our agreements:</p>
+
+        <div class="info-card green-card">
+            <h4>📁 Retention Periods</h4>
+            <ul>
+                <li><strong>Account Data</strong> (name, email, profile photo): Retained for as long as your account is active. Deleted within 30 days of account deletion request.</li>
+                <li><strong>App Listing Data:</strong> Retained while the listing is active. Removed when you delete your listing or account.</li>
+                <li><strong>Transaction Records:</strong> Retained for up to 3 years after the transaction date for legal, accounting, and dispute resolution purposes.</li>
+                <li><strong>Usage &amp; Activity Data:</strong> Retained for as long as your account is active. Anonymized or deleted upon account deletion.</li>
+                <li><strong>Analytics Data:</strong> Anonymized and retained by Firebase for up to 14 months. This data cannot identify individual users.</li>
+                <li><strong>Crash Reports:</strong> Retained by Firebase Crashlytics for up to 90 days.</li>
+                <li><strong>FCM Tokens:</strong> Updated automatically by the system. Old tokens are invalidated when new ones are generated.</li>
+            </ul>
+        </div>
+
+        <p>Once we no longer need your data for the stated purposes, we will delete or permanently anonymize it.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 8 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">8</div>
+            <h2>Your Rights &amp; Choices</h2>
+        </div>
+        <p>Depending on your location and applicable laws, you may have the following rights regarding your personal data:</p>
+
+        <div class="info-card green-card">
+            <h4>📋 Right to Access</h4>
+            <p>You have the right to request a copy of the personal data we hold about you. You can view most of your data directly in the App (profile, Sparks balance, activity history). For a complete data export, contact us at aitrickertesters@gmail.com.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>✏️ Right to Rectification</h4>
+            <p>You can update your account information by modifying your Google account details (name, profile photo). For other data corrections, contact us at aitrickertesters@gmail.com.</p>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>🗑️ Right to Deletion (Right to be Forgotten)</h4>
+            <p>You may request deletion of your account and all associated personal data. See Section 9 (Account Deletion) for full details on how to exercise this right.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>🔕 Right to Opt-Out of Notifications</h4>
+            <p>You can disable push notifications at any time through:</p>
+            <ul>
+                <li>Your device's system notification settings for the App</li>
+                <li>The App's internal Settings page</li>
+            </ul>
+            <p>Disabling notifications does not affect your account or access to features.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>🚫 Right to Restrict Processing</h4>
+            <p>You may request that we limit the processing of your personal data in certain circumstances. Note that restricting processing may affect the functionality of the App.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>📤 Right to Data Portability</h4>
+            <p>Where technically feasible, you may request your data in a structured, commonly used, machine-readable format. Contact us at aitrickertesters@gmail.com to exercise this right.</p>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>🌍 GDPR, CCPA &amp; Regional Rights</h4>
+            <p><strong>EU/EEA Users (GDPR):</strong> You have additional rights including the right to object to processing, right to restrict processing, and the right to lodge a complaint with a supervisory authority.</p>
+            <p><strong>California Users (CCPA):</strong> You have the right to know what data is collected, request deletion, and opt-out of data sales (we do not sell data).</p>
+            <p><strong>Indian Users (DPDPA):</strong> You have rights under the Digital Personal Data Protection Act including right to access, correction, and erasure of your data.</p>
+            <p>To exercise any of these rights, contact us at <strong>aitrickertesters@gmail.com</strong>. We will respond within 30 days (or sooner if required by applicable law).</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 9 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">9</div>
+            <h2>Account Deletion</h2>
+        </div>
+        <p>We provide you with the ability to request deletion of your account and all associated personal data.</p>
+
+        <div class="info-card red-card">
+            <h4>🗑️ How to Delete Your Account</h4>
+            <p>You can request account deletion through any of the following methods:</p>
+            <ul>
+                <li><strong>In-App:</strong> Navigate to Profile → Settings → Delete Account. Follow the confirmation prompts to permanently delete your account.</li>
+                <li><strong>Via Email:</strong> Send a deletion request to <strong>aitrickertesters@gmail.com</strong> from your registered email address with the subject line "Account Deletion Request".</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ What Happens When You Delete Your Account</h4>
+            <p>Upon successful account deletion:</p>
+            <ul>
+                <li>All your personal data (name, email, profile photo) is permanently deleted</li>
+                <li>All your Sparks balance is forfeited and cannot be recovered</li>
+                <li>All your app listings are removed from the platform</li>
+                <li>Your activity history, Trust Score, and Pack records are deleted</li>
+                <li>Your FCM notification token is invalidated</li>
+                <li>Any active Pack participation is terminated</li>
+            </ul>
+            <p><strong>Timeline:</strong> Account deletion is completed within <strong>30 days</strong> of your request. Some data may be retained for legal obligations (transaction records for up to 3 years).</p>
+            <p><strong>Irreversible:</strong> Account deletion is permanent and cannot be undone. You would need to create a new account to use the App again.</p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>📌 Data Retained After Deletion</h4>
+            <p>In accordance with legal requirements, the following data may be retained even after account deletion:</p>
+            <ul>
+                <li><strong>Transaction records:</strong> Purchase history (amount, date, plan type) retained for up to 3 years for legal/accounting purposes</li>
+                <li><strong>Anonymized analytics:</strong> Already-aggregated anonymous usage data that cannot identify you</li>
+                <li><strong>Legal compliance data:</strong> Any data required to be retained by applicable laws or regulations</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 10 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">10</div>
+            <h2>Security Measures</h2>
+        </div>
+        <p>We take commercially reasonable and industry-standard steps to protect your personal data from unauthorized access, alteration, disclosure, or destruction:</p>
+
+        <div class="info-card green-card">
+            <h4>🔐 Technical Safeguards</h4>
+            <ul>
+                <li><strong>Authentication:</strong> Google Sign-In with OAuth 2.0 — we never store or handle passwords</li>
+                <li><strong>Database Security:</strong> Firebase Firestore with strict security rules allowing only authenticated access</li>
+                <li><strong>Server-Side Logic:</strong> Sensitive operations processed via Cloud Functions (not client-side)</li>
+                <li><strong>Encryption in Transit:</strong> All data transmitted over HTTPS/TLS encryption</li>
+                <li><strong>Payment Security:</strong> Google Play Billing handles all payment data — we never see or store card details</li>
+                <li><strong>Access Control:</strong> Role-based access to backend systems, limited to authorized personnel only</li>
+            </ul>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>⚠️ Limitations</h4>
+            <p>While we strive to protect your data using commercially reasonable measures, no method of electronic storage or transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+            <p>In the event of a data breach that affects your personal data, we will notify you and relevant authorities as required by applicable law (within 72 hours for GDPR-covered users).</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 11 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">11</div>
+            <h2>User-Posted Content</h2>
+        </div>
+        <p>When you list an app for testing on our platform, the information you provide (app name, package name, store URL, icon, description, and testing link) becomes <strong>publicly visible</strong> to all authenticated users of the App.</p>
+        <div class="info-card amber-card">
+            <h4>⚠️ Public Visibility Notice</h4>
+            <p>By posting app listing content, you acknowledge and agree that:</p>
+            <ul>
+                <li>This information will be accessible to all community members</li>
+                <li>Other users may interact with your listing (join testing, view details)</li>
+                <li>We are not responsible for how others may use publicly available information you voluntarily disclose</li>
+                <li>You should not include any sensitive personal information in your app descriptions</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 12 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">12</div>
+            <h2>Children's Privacy</h2>
+        </div>
+        <div class="info-card red-card">
+            <h4>🧒 Children Under 13</h4>
+            <p>AiTricker Testers is <strong>not directed at children under the age of 13</strong>. We do not knowingly collect, use, or disclose personal information from children under 13.</p>
+            <p>If a parent or guardian becomes aware that their child has provided us with personal information without their consent, they should contact us immediately at <strong>aitrickertesters@gmail.com</strong>. We will delete the child's account and associated data within 48 hours of verification.</p>
+            <p>Our App does not contain any content directed at children, and we do not use any data collection practices that target minors.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 13 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">13</div>
+            <h2>Third-Party Services &amp; SDKs</h2>
+        </div>
+        <p>Our App uses the following third-party services. Each has their own privacy policy governing their data practices:</p>
+
+        <div class="info-card blue-card">
+            <h4>🔥 Firebase (by Google)</h4>
+            <p><strong>Services Used:</strong> Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Analytics, Crashlytics</p>
+            <p><strong>Data Processed:</strong> Account data, app data, anonymized usage metrics, crash reports, notification tokens</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            <p><strong>Firebase Terms:</strong> <a href="https://firebase.google.com/terms" target="_blank">https://firebase.google.com/terms</a></p>
+        </div>
+
+        <div class="info-card blue-card">
+            <h4>💳 Google Play Billing</h4>
+            <p><strong>Purpose:</strong> Processing in-app purchases (Basic ₹399 and Premium ₹599 plans)</p>
+            <p><strong>Data Processed:</strong> Payment information (handled entirely by Google — we never see payment details)</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>📌 Important Note</h4>
+            <p>We are not responsible for the privacy practices of third-party services. We encourage you to review their privacy policies. We only use reputable, well-established services (Google/Firebase) that comply with international data protection standards.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 14 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">14</div>
+            <h2>Changes to This Policy</h2>
+        </div>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes:</p>
+        <ul>
+            <li>We will update the "Last Updated" date at the top of this page</li>
+            <li>For significant changes, we will provide additional notice via push notification within the App</li>
+            <li>We may also notify you via email for material changes that affect your rights</li>
+        </ul>
+        <p>Your continued use of the App after any modifications to this Privacy Policy constitutes your acknowledgment of the changes and your consent to abide by the updated policy.</p>
+        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your data.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 15 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">15</div>
+            <h2>Contact Us</h2>
+        </div>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your personal data, or if you wish to exercise any of your rights, please contact us:</p>
+
+        <div class="contact-card green-contact">
+            <h3>Contact Information</h3>
+            <p><strong>App:</strong> AiTricker Testers<br>
+            <strong>Email:</strong> aitrickertesters@gmail.com<br>
+            <strong>Response Time:</strong> Within 30 days of receiving your request</p>
+            <a href="mailto:aitrickertesters@gmail.com">📧 Contact Support</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>This Privacy Policy is effective as of May 27, 2026 and applies to the AiTricker Testers mobile application available on Google Play Store.</p>
+        <p>© 2026 AiTricker Testers. All rights reserved.</p>
+    </div>
+
+</div><!-- end main-content -->
+
+</body>
+</html>
