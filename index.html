@@ -380,7 +380,7 @@ li strong { color: #111827; }
         <div class="info-card blue-card">
             <h4>📋 Developer Details</h4>
             <p><strong>App Name:</strong> AiTricker Testers</p>
-            <p><strong>Developer:</strong> AiTricker</p>
+            <p><strong>Developer:</strong> AiTricker Testers</p>
             <p><strong>Contact Email:</strong> aitrickertesters@gmail.com</p>
             <p><strong>Jurisdiction:</strong> Based in India, available to users worldwide</p>
             <p><strong>Platform:</strong> Android (Google Play Store)</p>
@@ -432,7 +432,7 @@ li strong { color: #111827; }
                 <li><strong>Package Name</strong> — The unique Android package identifier (e.g., com.example.myapp)</li>
                 <li><strong>Play Store Link</strong> — URL to your app's Google Play Store listing</li>
                 <li><strong>Closed Testing Link</strong> — The opt-in URL for your app's closed testing track</li>
-                <li><strong>App Icon URL</strong> — Link to your app's icon image</li>
+                <li><strong>App Icon (Photo)</strong> — You can upload an app icon image directly from your device's photo gallery. This image is stored on Firebase Storage and displayed to other users. The image is resized to 128×128 pixels before upload.</li>
                 <li><strong>App Description</strong> — A brief description of your app you provide</li>
             </ul>
             <p>This information is visible to other users of the App for the purpose of facilitating testing.</p>
@@ -477,11 +477,15 @@ li strong { color: #111827; }
         </div>
 
         <div class="info-card blue-card">
-            <h4>📈 Analytics &amp; Crash Data</h4>
-            <p>We use the following Firebase services to collect anonymized usage metrics and crash reports:</p>
-            <p><strong>Firebase Analytics:</strong> Collects anonymized usage data including session duration, feature interactions, screen views, and general usage patterns. This data is aggregated and does not personally identify you.</p>
-            <p><strong>Firebase Crashlytics:</strong> Automatically collects crash reports when the App encounters errors. This includes device model, OS version, stack traces, and app state at the time of crash. This helps us identify and fix bugs quickly.</p>
-            <p><strong>Important:</strong> No personally identifiable information (PII) is intentionally shared with analytics services. All analytics data is anonymized and aggregated.</p>
+            <h4>📱 Installed Apps Data</h4>
+            <p>Our App checks which apps are installed on your device to verify testing participation. Specifically:</p>
+            <ul>
+                <li><strong>Purpose:</strong> When you participate in Pack testing or Quick List testing, the App queries your device to confirm whether you have installed the required test apps</li>
+                <li><strong>Permission Used:</strong> QUERY_ALL_PACKAGES (Android 11+) — allows the App to detect installed packages</li>
+                <li><strong>What We Store:</strong> We store a record of which apps you have successfully tested (app package name and timestamp) in our database</li>
+                <li><strong>What We Do NOT Do:</strong> We do NOT collect a full list of all apps installed on your device. We only check for specific apps that are part of your active testing assignments</li>
+            </ul>
+            <p>This data is essential for the core functionality of the App — verifying that testers have actually installed and tested the assigned apps.</p>
         </div>
 
         <div class="info-card gray-card">
@@ -545,8 +549,7 @@ li strong { color: #111827; }
         <div class="info-card green-card">
             <h4>📊 To Improve &amp; Customize the App</h4>
             <ul>
-                <li>Analyzing anonymized usage patterns to improve features</li>
-                <li>Identifying and fixing crashes and bugs via Crashlytics</li>
+                <li>Analyzing usage patterns to improve features</li>
                 <li>Understanding which features are most used to prioritize development</li>
                 <li>Optimizing app performance and user experience</li>
             </ul>
@@ -602,7 +605,7 @@ li strong { color: #111827; }
             <h4>🛠️ With Service Providers</h4>
             <p>We use the following third-party services that may process your data:</p>
             <ul>
-                <li><strong>Google Firebase:</strong> Authentication, Cloud Firestore (database), Cloud Functions (backend logic), Firebase Cloud Messaging (notifications), Firebase Analytics, Firebase Crashlytics. Google's Privacy Policy governs their handling of data: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                <li><strong>Google Firebase:</strong> Authentication, Cloud Firestore (database), Cloud Storage (image uploads), Cloud Functions (backend logic), Firebase Cloud Messaging (notifications). Google's Privacy Policy governs their handling of data: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
                 <li><strong>Google Play Billing:</strong> Payment processing for in-app purchases. Google handles all payment data per their terms.</li>
             </ul>
         </div>
@@ -663,8 +666,7 @@ li strong { color: #111827; }
                 <li><strong>App Listing Data:</strong> Retained while the listing is active. Removed when you delete your listing or account.</li>
                 <li><strong>Transaction Records:</strong> Retained for up to 3 years after the transaction date for legal, accounting, and dispute resolution purposes.</li>
                 <li><strong>Usage &amp; Activity Data:</strong> Retained for as long as your account is active. Anonymized or deleted upon account deletion.</li>
-                <li><strong>Analytics Data:</strong> Anonymized and retained by Firebase for up to 14 months. This data cannot identify individual users.</li>
-                <li><strong>Crash Reports:</strong> Retained by Firebase Crashlytics for up to 90 days.</li>
+                <li><strong>Installed Apps Data:</strong> Testing verification records retained as long as your account is active. Deleted upon account deletion.</li>
                 <li><strong>FCM Tokens:</strong> Updated automatically by the system. Old tokens are invalidated when new ones are generated.</li>
             </ul>
         </div>
@@ -849,8 +851,8 @@ li strong { color: #111827; }
 
         <div class="info-card blue-card">
             <h4>🔥 Firebase (by Google)</h4>
-            <p><strong>Services Used:</strong> Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Analytics, Crashlytics</p>
-            <p><strong>Data Processed:</strong> Account data, app data, anonymized usage metrics, crash reports, notification tokens</p>
+            <p><strong>Services Used:</strong> Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, Cloud Messaging</p>
+            <p><strong>Data Processed:</strong> Account data, app data, uploaded images, notification tokens</p>
             <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
             <p><strong>Firebase Terms:</strong> <a href="https://firebase.google.com/terms" target="_blank">https://firebase.google.com/terms</a></p>
         </div>
