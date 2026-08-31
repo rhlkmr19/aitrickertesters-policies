@@ -320,6 +320,7 @@ li strong { color: #111827; }
             <a class="tab-btn active" href="index.html">Privacy Policy</a>
             <a class="tab-btn" href="terms-and-conditions.html">Terms &amp; Conditions</a>
             <a class="tab-btn" href="refund-policy.html">Refund Policy</a>
+            <a class="tab-btn" href="community-guidelines.html">Community Guidelines</a>
         </div>
     </div>
 </nav>
@@ -330,7 +331,7 @@ li strong { color: #111827; }
     <div class="header-card green">
         <h1>Privacy Policy</h1>
         <p class="subtitle">AiTricker Testers Mobile Application</p>
-        <p class="date">Last Updated: May 27, 2026</p>
+        <p class="date">Last Updated: August 31, 2026</p>
         <div class="badges">
             <span class="badge">✅ GDPR Compliant</span>
             <span class="badge">🔒 Data Protected</span>
@@ -363,6 +364,7 @@ li strong { color: #111827; }
             <li>Account Deletion</li>
             <li>Security Measures</li>
             <li>User-Posted Content</li>
+            <li>Group Chat &amp; Messages</li>
             <li>Children's Privacy</li>
             <li>Third-Party Services &amp; SDKs</li>
             <li>Changes to This Policy</li>
@@ -487,6 +489,20 @@ li strong { color: #111827; }
                 <li><strong>What We Do NOT Do:</strong> We do NOT collect a full list of all apps installed on your device. We only check for specific apps that are part of your active testing assignments</li>
             </ul>
             <p>This data is essential for the core functionality of the App — verifying that testers have actually installed and tested the assigned apps.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>💬 Group Chat Messages</h4>
+            <p>Groups have an optional text-only chat that is visible to the members of that group only. If you use it, we collect and store:</p>
+            <ul>
+                <li><strong>Message Text</strong> — what you type (maximum 100 characters per message). Text only; photos, videos, files and voice notes cannot be sent.</li>
+                <li><strong>Sender Identity</strong> — your user ID and display name, so the group knows who wrote the message</li>
+                <li><strong>App Reference</strong> — the app you listed in that group, whose icon is shown next to your messages</li>
+                <li><strong>Timestamps</strong> — when the message was sent, and when you last sent a message (used to apply the waiting time between messages)</li>
+                <li><strong>Guidelines Acceptance</strong> — the version of the Community Guidelines you accepted, and when</li>
+                <li><strong>Moderation Data</strong> — if a message is reported: who reported it, how many members reported it, and a copy of the message text kept for the admin's review. Also any chat suspension applied to you and its expiry, and the list of members you have chosen to block.</li>
+            </ul>
+            <p>Every message is checked on our servers before delivery for abuse, links, contact details and promotional content. A refused message is not stored and not delivered. See Section 12 (Group Chat &amp; Messages) for retention and your choices, and our <a href="community-guidelines.html">Community Guidelines</a> for the rules.</p>
         </div>
 
         <div class="info-card gray-card">
@@ -668,6 +684,7 @@ li strong { color: #111827; }
                 <li><strong>Transaction Records:</strong> Retained for up to 3 years after the transaction date for legal, accounting, and dispute resolution purposes.</li>
                 <li><strong>Usage &amp; Activity Data:</strong> Retained for as long as your account is active. Anonymized or deleted upon account deletion.</li>
                 <li><strong>Installed Apps Data:</strong> Testing verification records retained as long as your account is active. Deleted upon account deletion.</li>
+                <li><strong>Group Chat Messages:</strong> Retained only while the group is active. Deleted automatically within 24 hours of the group finishing. A message that was reported is also kept in the moderation record for as long as it is needed to review the complaint and to identify repeat offenders; you can ask us to delete it by email.</li>
                 <li><strong>FCM Tokens:</strong> Updated automatically by the system. Old tokens are invalidated when new ones are generated.</li>
             </ul>
         </div>
@@ -830,6 +847,63 @@ li strong { color: #111827; }
     <div class="section">
         <div class="section-head">
             <div class="section-num green">12</div>
+            <h2>Group Chat &amp; Messages</h2>
+        </div>
+        <p>Testing groups include an optional <strong>text-only chat</strong> so that the members of a group can help each other complete their 14 days. This section explains exactly how it handles your data.</p>
+
+        <div class="info-card blue-card">
+            <h4>💬 Who can see your messages</h4>
+            <ul>
+                <li>Only the <strong>members of that same group</strong> can read the messages. Chat is not public and is not visible to other users of the App.</li>
+                <li>There is <strong>no private one-to-one messaging</strong> and no way for a stranger to contact you. You can only ever be in a chat with the testers of a group you joined.</li>
+                <li><strong>Text only</strong> — photos, videos, files and voice notes cannot be sent. Each message is limited to 100 characters.</li>
+                <li>Your <strong>display name</strong> and the <strong>icon of the app you listed</strong> appear next to your messages.</li>
+                <li>Screenshots of the chat screen are blocked inside the App.</li>
+            </ul>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>🎯 Why we process it</h4>
+            <p>Only to operate the feature (deliver messages to your group), to keep it safe (filtering, reporting, blocking, moderation), and to prevent spam (the waiting time between messages). We do <strong>not</strong> use chat content for advertising, profiling, or training any AI model, and we do <strong>not</strong> sell or share it with third parties. It is stored on Google Firebase infrastructure and transmitted over encrypted HTTPS connections.</p>
+        </div>
+
+        <div class="info-card amber-card">
+            <h4>🗑️ How long we keep it</h4>
+            <ul>
+                <li><strong>Messages are deleted automatically when the group finishes</strong> — normally within 24 hours. Nothing is archived.</li>
+                <li>A message that was <strong>reported</strong> is also copied into the moderation record, so the admin can review the complaint and recognise repeat offenders. It is kept only as long as needed for that purpose.</li>
+                <li>Your record of which Guidelines version you accepted, and any chat suspension, is kept with your account.</li>
+            </ul>
+        </div>
+
+        <div class="info-card gray-card">
+            <h4>🛡️ Moderation — what the admin can see</h4>
+            <p>The admin does <strong>not</strong> browse or read group chats. A message reaches the admin only when members report it. The admin can then delete the message, suspend the reporting target's chat access for 1–14 days, or dismiss the report and restore the message. Automated checks (abuse words, links, contact details, promotional phrases) run on our servers before a message is delivered; a refused message is neither stored nor delivered, and carries no penalty.</p>
+        </div>
+
+        <div class="info-card green-card">
+            <h4>✅ Your choices</h4>
+            <ul>
+                <li><strong>Do not use it.</strong> Chat is entirely optional — you can complete testing and earn normally without ever opening it.</li>
+                <li><strong>Block a member</strong> so you never see their messages. That choice is stored against your account and is not revealed to them.</li>
+                <li><strong>Report a message</strong> that breaks the rules (press and hold the message → Report).</li>
+                <li><strong>Ask us to delete your messages</strong> before the group ends by emailing <strong>aitrickertesters@gmail.com</strong> from your registered address.</li>
+            </ul>
+            <p>The rules for chat are in our <a href="community-guidelines.html">Community Guidelines</a>, which you must accept in the App before sending your first message.</p>
+        </div>
+
+        <div class="info-card red-card">
+            <h4>⚠️ Treat chat as public</h4>
+            <p>Everything you type is visible to every member of your group. Never post passwords, OTPs, payment details, your phone number, your address, or anyone else's personal information.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 13 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num green">13</div>
             <h2>Children's Privacy</h2>
         </div>
         <div class="info-card red-card">
@@ -842,10 +916,10 @@ li strong { color: #111827; }
 
     <hr class="divider">
 
-    <!-- Section 13 -->
+    <!-- Section 14 -->
     <div class="section">
         <div class="section-head">
-            <div class="section-num green">13</div>
+            <div class="section-num green">14</div>
             <h2>Third-Party Services &amp; SDKs</h2>
         </div>
         <p>Our App uses the following third-party services. Each has their own privacy policy governing their data practices:</p>
@@ -873,10 +947,10 @@ li strong { color: #111827; }
 
     <hr class="divider">
 
-    <!-- Section 14 -->
+    <!-- Section 15 -->
     <div class="section">
         <div class="section-head">
-            <div class="section-num green">14</div>
+            <div class="section-num green">15</div>
             <h2>Changes to This Policy</h2>
         </div>
         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes:</p>
@@ -891,10 +965,10 @@ li strong { color: #111827; }
 
     <hr class="divider">
 
-    <!-- Section 15 -->
+    <!-- Section 16 -->
     <div class="section">
         <div class="section-head">
-            <div class="section-num green">15</div>
+            <div class="section-num green">16</div>
             <h2>Contact Us</h2>
         </div>
         <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your personal data, or if you wish to exercise any of your rights, please contact us:</p>
