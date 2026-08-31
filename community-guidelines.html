@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guidelines — AiTricker Testers</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #374151;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+.top-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.top-nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tabs {
+    display: flex;
+    gap: 4px;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 12px;
+}
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.tab-btn:hover {
+    color: #374151;
+    background: #e5e7eb;
+}
+.tab-btn.active {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+.header-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    border: 1px solid;
+    background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+    border-color: #bfdbfe;
+}
+.header-card h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+.header-card .subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+.header-card .date {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4b5563;
+}
+.section { margin-bottom: 28px; }
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.section-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    flex-shrink: 0;
+}
+.section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+.section p { font-size: 15px; margin-bottom: 12px; }
+.section ul, .section ol { margin-left: 22px; margin-bottom: 12px; }
+.section li { font-size: 15px; margin-bottom: 8px; }
+.info-card {
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    border: 1px solid;
+}
+.info-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+.info-card p { font-size: 14px; margin-bottom: 8px; }
+.info-card ul { margin-left: 20px; margin-bottom: 0; }
+.info-card li { font-size: 14px; margin-bottom: 6px; }
+.green-card { background: #f0fdf4; border-color: #bbf7d0; }
+.blue-card { background: #eff6ff; border-color: #bfdbfe; }
+.amber-card { background: #fffbeb; border-color: #fde68a; }
+.red-card { background: #fef2f2; border-color: #fecaca; }
+.gray-card { background: #f9fafb; border-color: #e5e7eb; }
+.rule-list { list-style: none; margin-left: 0; }
+.rule-list li {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.rule-list li strong { color: #111827; }
+.divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 28px 0;
+}
+.contact-box {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-top: 14px;
+}
+.contact-box p { margin-bottom: 4px; font-size: 14px; }
+.footer-note {
+    margin-top: 32px;
+    font-size: 13px;
+    color: #9ca3af;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-inner">
+        <div class="brand">
+            <div class="brand-icon">AT</div>
+            <span>AiTricker Testers</span>
+        </div>
+        <div class="tabs">
+            <a class="tab-btn" href="index.html">Privacy Policy</a>
+            <a class="tab-btn" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="tab-btn" href="refund-policy.html">Refund Policy</a>
+            <a class="tab-btn active" href="community-guidelines.html">Community Guidelines</a>
+        </div>
+    </div>
+</nav>
+
+<div class="main-content">
+
+    <div class="header-card">
+        <h1>Community Guidelines</h1>
+        <p class="subtitle">Rules for Group Chat in AiTricker Testers</p>
+        <p class="date">Last Updated: August 31, 2026</p>
+        <div class="badges">
+            <span class="badge">💬 Text only</span>
+            <span class="badge">🚫 No links or promotion</span>
+            <span class="badge">🚩 Report &amp; Block</span>
+            <span class="badge">🛡️ Moderated</span>
+        </div>
+    </div>
+
+    <p style="font-size: 15px; color: #4b5563; margin-bottom: 12px;">
+        Group Chat exists for one reason: to help the members of your own testing group finish their 14 days successfully. Ask a question, report a problem you found in an app, tell the group you have checked in. That is it.
+    </p>
+    <div class="info-card amber-card">
+        <h4>⚠️ Accepting these Guidelines</h4>
+        <p>You must accept these Guidelines inside the app before you can send your first message. By sending a message you confirm that you have read and agree to the rules below, and to our <a href="terms-and-conditions.html">Terms &amp; Conditions</a> and <a href="index.html">Privacy Policy</a>.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">1</div>
+            <h2>What Group Chat is</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>💬 How it works</h4>
+            <ul>
+                <li><strong>Group members only.</strong> Only the testers of your own active group can read or send messages. There is no public chat, no private one-to-one messaging, and no way to be contacted by a stranger.</li>
+                <li><strong>Text only.</strong> No photos, videos, files, voice notes or attachments can be sent — the feature does not support them at all.</li>
+                <li><strong>Short messages.</strong> Each message is limited to 100 characters.</li>
+                <li><strong>A waiting time between messages.</strong> After you send a message you must wait a short cooldown before sending the next one. This keeps the chat readable and makes flooding impossible.</li>
+                <li><strong>Only while the group runs.</strong> Chat is available while your group is active. When the group finishes, the chat closes and all of its messages are permanently deleted.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">2</div>
+            <h2>The rules</h2>
+        </div>
+        <ol class="rule-list">
+            <li><strong>Keep it about testing.</strong> Questions, help, feedback and check-in updates for the apps in your group.</li>
+            <li><strong>Be respectful.</strong> No abuse, insults, swearing, threats, harassment, sexual content, hate speech, or attacks on anyone's religion, caste, gender, nationality or identity.</li>
+            <li><strong>No links or contact details.</strong> No URLs, no invite links, no phone numbers, no email addresses, no social media handles or usernames.</li>
+            <li><strong>No promotion or advertising.</strong> Do not advertise channels, groups, services, websites or other apps. Do not ask people to subscribe, follow or "sub for sub".</li>
+            <li><strong>No money, no selling, no "DM me".</strong> Do not buy, sell, or offer paid services. Do not ask people to message you privately or on another platform.</li>
+            <li><strong>No personal information.</strong> Do not post your own or anyone else's private details, and never share passwords, OTPs or payment information.</li>
+            <li><strong>No scams or illegal activity.</strong> No fake offers, no earning schemes, no remote-access tools, no anything that breaks the law.</li>
+            <li><strong>No impersonation.</strong> Do not pretend to be the admin, a Google employee, or another user.</li>
+            <li><strong>One account, one person.</strong> Do not use the chat to organise cheating of the testing rules.</li>
+        </ol>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">3</div>
+            <h2>How we enforce this</h2>
+        </div>
+        <p>Three layers, in this order:</p>
+        <div class="info-card green-card">
+            <h4>1️⃣ Automatic check before sending</h4>
+            <p>Every message is checked on our server before anyone can see it. Abuse, links, contact details, prices and known promotional phrases are refused. A refused message is simply not delivered — you are told about it and you can rewrite it. <strong>A refused message is not a punishment:</strong> there is no warning, no Trust Score change and no effect on your testing.</p>
+        </div>
+        <div class="info-card blue-card">
+            <h4>2️⃣ Reports from members</h4>
+            <p>Any member can report a message. When enough different members report the same message, it is hidden from the group immediately and sent to the admin for review. You can also block an individual member so that you never see their messages again — that choice is yours alone, and the other person is not told.</p>
+        </div>
+        <div class="info-card red-card">
+            <h4>3️⃣ Admin action</h4>
+            <p>The admin reviews reported messages and can:</p>
+            <ul>
+                <li>delete the message,</li>
+                <li>suspend your access to chat for 1 to 14 days, or for the remaining life of the group,</li>
+                <li>dismiss the report and restore the message if it was reported unfairly.</li>
+            </ul>
+            <p>Serious or repeated violations can also lead to action on your account under our <a href="terms-and-conditions.html">Terms &amp; Conditions</a>. A chat suspension does not stop you from testing, checking in, or earning — you keep taking part in your group normally.</p>
+        </div>
+        <div class="info-card gray-card">
+            <h4>🔎 What the admin can and cannot see</h4>
+            <p>The admin does not read group chats. Messages reach the admin only when members report them. This is deliberate — moderation should follow a complaint, not surveillance.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">4</div>
+            <h2>How to report or block someone</h2>
+        </div>
+        <div class="info-card blue-card">
+            <h4>📱 Inside the app</h4>
+            <ul>
+                <li><strong>Report a message:</strong> press and hold the message → <strong>Report</strong>.</li>
+                <li><strong>Block a member:</strong> press and hold any of their messages → <strong>Block</strong>. Their messages disappear from your chat.</li>
+                <li><strong>Unblock someone:</strong> chat screen → menu (⋮) → <strong>Blocked members</strong>.</li>
+            </ul>
+        </div>
+        <div class="info-card amber-card">
+            <h4>✉️ Serious matters</h4>
+            <p>For anything urgent or serious — threats, harassment that continues, child safety concerns, or illegal content — email us directly. Please include the group name and roughly when it happened.</p>
+        </div>
+        <div class="contact-box">
+            <p><strong>Email:</strong> aitrickertesters@gmail.com</p>
+            <p><strong>Response time:</strong> within 24 hours</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">5</div>
+            <h2>Privacy in chat</h2>
+        </div>
+        <div class="info-card green-card">
+            <h4>🔒 What you should know</h4>
+            <ul>
+                <li>Your <strong>display name</strong> and the <strong>icon of the app you listed</strong> are shown next to your messages inside the group.</li>
+                <li>Messages are stored on our servers only while the group is running, and are <strong>deleted automatically when the group finishes</strong>.</li>
+                <li>If a message is reported, a copy is kept in the moderation record so the admin can review it and recognise repeat offenders.</li>
+                <li>Screenshots of the chat screen are blocked inside the app.</li>
+                <li>Anything you type is visible to every member of your group. Treat it as public — do not type anything private.</li>
+            </ul>
+            <p>Full details are in our <a href="index.html">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">6</div>
+            <h2>Think a decision was wrong?</h2>
+        </div>
+        <p>If your chat access was suspended and you believe it was a mistake, email <strong>aitrickertesters@gmail.com</strong> with your registered email address and the group name. We will look at the reported message and reply within 24 hours. If the report was unfair, the suspension is lifted and the message is restored.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-num">7</div>
+            <h2>Changes to these Guidelines</h2>
+        </div>
+        <p>We may update these Guidelines as the feature grows. When we make a meaningful change, the app asks you to read and accept the new version before you send your next message. The date at the top of this page always shows the current version.</p>
+    </div>
+
+    <p class="footer-note">AiTricker Testers · aitrickertesters@gmail.com · Last updated: August 31, 2026</p>
+
+</div>
+
+</body>
+</html>
