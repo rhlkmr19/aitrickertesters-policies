@@ -448,8 +448,8 @@ li strong { color: #111827; }
                 <li><strong>Group Activity:</strong> Which public testing groups you join, daily check-in status, completion or desertion status, timestamps</li>
                 <li><strong>Public Testing Activity:</strong> Apps you test, testing timestamps, daily testing count</li>
                 <li><strong>Sparks Transactions:</strong> Sparks earned (from testing), Sparks spent (on listings), transaction history with timestamps</li>
-                <li><strong>Trust Score:</strong> Your current Trust Score value and history of changes (increases and decreases)</li>
-                <li><strong>Warnings &amp; Cooldowns:</strong> Any warnings issued, cooldown periods applied, and their reasons</li>
+                <li><strong>Reliability Signal:</strong> An internal account reliability signal we maintain, including its history of changes (increases and decreases)</li>
+                <li><strong>Warnings:</strong> Any warnings issued, missed check-in counts, and their reasons</li>
                 <li><strong>Queue Status:</strong> Your position in public testing and group queues</li>
             </ul>
         </div>
@@ -548,8 +548,8 @@ li strong { color: #111827; }
                 <li>Tracking Sparks earned through testing activities</li>
                 <li>Deducting Sparks spent on app listings (50 for a standard listing, 80 for a group)</li>
                 <li>Processing Sparks refunds when users cancel from queues before testing begins</li>
-                <li>Enforcing accountability rules (missed day tracking, warnings, cooldowns)</li>
-                <li>Calculating and updating Trust Score based on user behavior</li>
+                <li>Enforcing accountability rules (missed day tracking, warnings, Sparks penalties)</li>
+                <li>Maintaining an internal reliability signal based on account behavior</li>
             </ul>
         </div>
 
@@ -772,7 +772,7 @@ li strong { color: #111827; }
                 <li>All your personal data (name, email, profile photo) is permanently deleted</li>
                 <li>All your Sparks balance is forfeited and cannot be recovered</li>
                 <li>All your app listings are removed from the platform</li>
-                <li>Your activity history, Trust Score, and public testing records are deleted</li>
+                <li>Your activity history, internal reliability signal, and public testing records are deleted</li>
                 <li>Your FCM notification token is invalidated</li>
                 <li>Any active public testing group participation is terminated</li>
             </ul>
@@ -878,13 +878,14 @@ li strong { color: #111827; }
 
         <div class="info-card gray-card">
             <h4>🛡️ Moderation — what the admin can see</h4>
-            <p>Group chat is <strong>not end-to-end encrypted</strong>. While a group is running, its messages are stored on our servers in a readable form, which means the admin is able to read them. Please read this together with "Treat chat as public" below.</p>
+            <p>Group chat is <strong>not end-to-end encrypted</strong>. From the moment a group starts filling up until it finishes, its messages are stored on our servers in a readable form, which means the admin is able to read them. Please read this together with "Treat chat as public" below.</p>
             <p>Messages are looked at in three situations:</p>
             <ul>
                 <li><strong>Automatically, on every message.</strong> Before a message is delivered, our server checks it for abuse words, links, contact details and known promotional phrases. A refused message is neither stored nor delivered and carries no penalty. No person reads it.</li>
                 <li><strong>When members report it.</strong> Enough reports on the same message hide it from the group immediately and send it to the admin, who can delete it, suspend that member's chat access for 1–14 days or for the rest of the group, or dismiss the report and restore the message.</li>
-                <li><strong>When the admin reviews a running group.</strong> The admin may open the chat of an active group to check for spam, scams, off-platform selling, harassment or other abuse — <strong>including messages that nobody has reported</strong>. This is done for safety and spam control only.</li>
+                <li><strong>When the admin reviews a group.</strong> The admin may open the chat of any group that has not finished yet — including one that is still filling up or waiting to be approved — to check for spam, scams, off-platform selling, harassment or other abuse — <strong>including messages that nobody has reported</strong>. This is done for safety and spam control only.</li>
             </ul>
+            <p>The admin can also post help messages into a group's chat, for example when members are stuck setting up a test. Such a message always appears under the name <strong>Support Team</strong> on a marked card, never under a member's name; members cannot reply to, mention, report or block it.</p>
             <p>We use chat content <strong>only</strong> to operate and moderate the feature, and where we are legally obliged to act (for example, child-safety reporting). We do not use it for advertising, profiling, or training any AI model, and we never sell it. Once a group finishes its chat is deleted automatically and cannot be reviewed afterwards.</p>
         </div>
 
