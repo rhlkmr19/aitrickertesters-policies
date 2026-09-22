@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AiTricker Testers - 12 Testers Closed Testing</title>
+  <meta name="description" content="AiTricker Testers helps app developers participate in closed testing programs and manage testing activities.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(100% - 32px, 1000px);
+      margin: auto;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e6e8ed;
+      padding: 18px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: #7357e8;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #5f6878;
+      font-size: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 22px;
+      border-radius: 10px;
+      background: #7357e8;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 30px 0 70px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e8ef;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #687184;
+    }
+
+    .links {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .links a {
+      color: #7357e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact {
+      text-align: center;
+      background: white;
+      border: 1px solid #e5e8ef;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .contact a {
+      color: #7357e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 25px 0;
+      background: #ffffff;
+      border-top: 1px solid #e6e8ed;
+      text-align: center;
+      color: #727b8c;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">AT</div>
+        <div>AiTricker Testers</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <h1>12 Testers Closed Testing</h1>
+
+        <p>
+          AiTricker Testers is a testing platform that helps app developers
+          participate in Android closed testing programs and manage their
+          testing activities.
+        </p>
+
+        <a class="cta" href="index.html">
+          View Privacy Policy
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card-grid">
+
+          <div class="card">
+            <h2>Closed Testing</h2>
+            <p>
+              Participate in app testing activities and help developers
+              collect feedback before wider release.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2>Tester Community</h2>
+            <p>
+              Connect with other testers and participate in testing
+              opportunities provided through the service.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2>Developer Support</h2>
+            <p>
+              The service is designed to support developers during
+              Android closed testing requirements.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact">
+          <h2>Contact & Policies</h2>
+
+          <p style="margin-top:10px;">
+            For questions regarding the service, please contact:
+          </p>
+
+          <p style="margin-top:8px;">
+            <a href="mailto:androitricker@gmail.com">
+              androitricker@gmail.com
+            </a>
+          </p>
+
+          <div class="links">
+            <a href="index.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="community-guidelines.html">Community Guidelines</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 AiTricker. All rights reserved.
+  </footer>
+
+</body>
+</html>
